@@ -7,87 +7,86 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&family=Tajawal:wght@400;700&display=swap" rel="stylesheet">
     <style>
-        body { font-family: 'Tajawal', sans-serif; background-color: #e9f0f0; }
+        body { font-family: 'Tajawal', sans-serif; background-color: #f0f4f4; scroll-behavior: smooth; }
         .font-amiri { font-family: 'Amiri', serif; }
-        .sidebar-item { border-bottom: 1px solid #c5dada; transition: 0.3s; }
-        .sidebar-item:hover { background-color: #d1e5e5; padding-right: 10px; }
-        .main-box { background: white; border: 1px solid #adc9c9; border-radius: 4px; }
-        .header-bg { background: linear-gradient(to bottom, #3a6b6b, #234d4d); }
+        .main-box { background: white; border: 1px solid #adc9c9; border-radius: 8px; box-shadow: 0 2px 4px rgba(0,0,0,0.05); }
+        .header-bg { background: linear-gradient(to bottom, #1e3a3a, #2d5a5a); }
+        .section-card { display: none; } /* إخفاء الأقسام افتراضياً */
+        .section-card:target { display: block; } /* إظهار القسم عند الضغط عليه */
+        #home:not(:target) ~ #home-content { display: block; } /* إظهار الرئيسية أول مرة */
     </style>
 </head>
 <body class="text-gray-800">
 
-    <header class="header-bg text-white py-8 shadow-lg border-b-4 border-yellow-600">
+    <header class="header-bg text-white py-10 shadow-lg border-b-4 border-yellow-600">
         <div class="container mx-auto px-4 text-center">
-            <h1 class="text-3xl md:text-5xl font-amiri font-bold">الموقع الرسمي لفضيلة الشيخ زكريا بن شعيب العدني</h1>
-            <p class="mt-2 text-emerald-100 italic">بإشراف إدارة الموقع</p>
+            <h1 class="text-4xl md:text-6xl font-amiri font-bold mb-3">الموقع الرسمي لفضيلة الشيخ زكريا بن شعيب العدني</h1>
+            <p class="text-emerald-100 text-lg italic">بإشراف إدارة الموقع</p>
         </div>
     </header>
 
-    <div class="container mx-auto px-4 py-6 flex flex-col md:flex-row gap-6">
+    <div class="container mx-auto px-4 py-8 flex flex-col md:flex-row gap-8">
         
         <aside class="w-full md:w-1/4">
-            <div class="main-box overflow-hidden">
-                <div class="bg-emerald-800 text-white p-3 font-bold text-center">أقسام الموقع</div>
+            <div class="main-box overflow-hidden sticky top-5">
+                <div class="bg-emerald-800 text-white p-4 font-bold text-center text-lg">أقسام الموقع</div>
                 <nav class="flex flex-col">
-                    <a href="#" class="sidebar-item p-3 text-emerald-900 font-medium">الصفحة الرئيسية</a>
-                    <a href="#" class="sidebar-item p-3 text-emerald-900 font-medium">الكلمات الشهرية</a>
-                    <a href="#" class="sidebar-item p-3 text-emerald-900 font-medium">فتاوى العقيدة</a>
-                    <a href="#" class="sidebar-item p-3 text-emerald-900 font-medium">أصول الفقه</a>
-                    <a href="#" class="sidebar-item p-3 text-emerald-900 font-medium">المحاضرات الصوتية</a>
-                    <a href="#" class="sidebar-item p-3 text-emerald-900 font-medium">مؤلفات الشيخ</a>
-                    <a href="#" class="sidebar-item p-3 text-emerald-900 font-medium">من أحوال السلف</a>
-                    <a href="#" class="sidebar-item p-3 text-emerald-900 font-medium">تنبيهات وتوجيهات</a>
+                    <a href="#" class="p-4 border-b hover:bg-emerald-50 text-emerald-900 font-bold transition">🏠 الرئيسية</a>
+                    <a href="#fatwa" class="p-4 border-b hover:bg-emerald-50 text-emerald-900 font-bold transition">🔹 فتاوى العقيدة</a>
+                    <a href="#lessons" class="p-4 border-b hover:bg-emerald-50 text-emerald-900 font-bold transition">🎙️ المحاضرات الصوتية</a>
+                    <a href="#books" class="p-4 border-b hover:bg-emerald-50 text-emerald-900 font-bold transition">📚 مؤلفات الشيخ</a>
                 </nav>
-            </div>
-            
-            <div class="main-box mt-6 p-4 text-center">
-                <h4 class="font-bold text-emerald-800 border-b mb-3">بحث في الموقع</h4>
-                <input type="text" placeholder="اكتب كلمة البحث..." class="w-full p-2 border rounded text-sm">
             </div>
         </aside>
 
         <main class="w-full md:w-3/4">
-            <div class="main-box mb-6">
-                <div class="bg-gray-100 p-3 font-bold border-b border-gray-300 text-emerald-900 flex justify-between">
-                    <span>جديد الفتاوى والمقالات</span>
-                    <span class="text-xs text-gray-500">الأربعاء 15 أبريل 2026</span>
-                </div>
-                <div class="p-6">
-                    <ul class="space-y-4">
-                        <li class="flex items-start gap-2">
-                            <span class="text-yellow-600">✦</span>
-                            https://youtube.com/playlist?list=PLnywrwC1MV3p-UyDPjpbpAEGSpAlE9OkD&si=xUk-hBzfpXFiEXzd
-                        <li class="flex items-start gap-2">
-                            <span class="text-yellow-600">✦</span>
-                            <a href="#" class="text-blue-800 hover:underline">شرح رسالة الأصول من علم الأصول (الدرس الأول)</a>
-                        </li>
-                        <li class="flex items-start gap-2">
-                            <span class="text-yellow-600">✦</span>
-                            <a href="#" class="text-blue-800 hover:underline">توجيهات لطلبة العلم في مدينة عدن وما جاورها</a>
-                        </li>
-                    </ul>
+            
+            <div id="home-content" class="main-box p-8 text-center bg-white border-t-4 border-emerald-700">
+                <h2 class="text-2xl font-bold text-emerald-800 mb-4 font-amiri">مرحباً بكم في موقع فضيلة الشيخ زكريا العدني</h2>
+                <p class="text-gray-600 leading-relaxed italic text-lg">"نسعى لنشر العلم الشرعي الصحيح على منهج السلف الصالح، وتسهيل الوصول لدروس ومؤلفات الشيخ."</p>
+                <div class="mt-8 grid grid-cols-1 md:grid-cols-2 gap-4">
+                    <div class="p-4 bg-emerald-50 rounded-lg border border-emerald-100 italic">جديدنا: شرح كتاب التوحيد (قريباً)</div>
+                    <div class="p-4 bg-yellow-50 rounded-lg border border-yellow-100 italic">تنبيه: تابعوا قسم الفتاوى للتحديثات اليومية</div>
                 </div>
             </div>
 
-            <div class="main-box">
-                <div class="bg-gray-100 p-3 font-bold border-b border-gray-300 text-emerald-900">آخر الكتب والرسائل</div>
-                <div class="p-6 grid grid-cols-2 md:grid-cols-4 gap-4 text-center">
-                    <div class="p-2 border rounded hover:shadow-md transition">
-                        <div class="bg-emerald-100 h-32 mb-2 flex items-center justify-center text-emerald-800 text-xs">صورة الكتاب</div>
-                        <p class="text-sm font-bold">كتاب التوحيد</p>
-                    </div>
-                    <div class="p-2 border rounded hover:shadow-md transition">
-                        <div class="bg-emerald-100 h-32 mb-2 flex items-center justify-center text-emerald-800 text-xs">صورة الكتاب</div>
-                        <p class="text-sm font-bold">شرح الواسطية</p>
+            <div id="fatwa" class="section-card main-box p-6 border-t-4 border-emerald-700">
+                <h2 class="text-2xl font-bold text-emerald-800 mb-6 border-b pb-2 italic">🔹 قسم فتاوى العقيدة</h2>
+                <ul class="space-y-4">
+                    <li class="p-3 bg-gray-50 rounded border hover:bg-white transition flex justify-between">
+                        <span>1. سؤال عن الاستواء على العرش</span>
+                        <a href="#" class="text-blue-600 font-bold">قراءة الجواب ←</a>
+                    </li>
+                </ul>
+            </div>
+
+            <div id="lessons" class="section-card main-box p-6 border-t-4 border-emerald-700">
+                <h2 class="text-2xl font-bold text-emerald-800 mb-6 border-b pb-2 italic">🎙️ المحاضرات الصوتية</h2>
+                <div class="grid grid-cols-1 gap-4 text-right">
+                    <div class="p-4 border rounded flex flex-col md:flex-row justify-between items-center gap-4 bg-emerald-50">
+                        <span class="font-bold">سلسلة شرح الأصول الثلاثة - الدرس 1</span>
+                        <a href="#" class="bg-emerald-700 text-white px-4 py-2 rounded-full text-sm">استماع وتحميل</a>
                     </div>
                 </div>
             </div>
+
+            <div id="books" class="section-card main-box p-6 border-t-4 border-emerald-700">
+                <h2 class="text-2xl font-bold text-emerald-800 mb-6 border-b pb-2 italic">📚 مؤلفات الشيخ</h2>
+                <div class="grid grid-cols-2 md:grid-cols-3 gap-6">
+                    <div class="text-center">
+                        <div class="bg-gray-200 h-48 rounded mb-2 shadow flex items-center justify-center text-gray-400 italic">صورة الغلاف</div>
+                        <h3 class="font-bold text-sm">رسالة في المنهج</h3>
+                        <a href="#" class="text-emerald-700 text-xs block mt-1 underline">تحميل PDF</a>
+                    </div>
+                </div>
+            </div>
+
         </main>
     </div>
 
-    <footer class="bg-emerald-900 text-white py-6 mt-12 text-center text-sm border-t-4 border-yellow-600">
-        <p>الموقع الرسمي لفضيلة الشيخ زكريا بن شعيب العدني - جميع الحقوق محفوظة</p>
+    <footer class="bg-emerald-900 text-white py-8 mt-12 text-center text-sm border-t-4 border-yellow-600">
+        <p class="mb-2 italic">الموقع الرسمي لفضيلة الشيخ زكريا بن شعيب العدني</p>
+        <p class="opacity-50">جميع الحقوق محفوظة لكل مسلم © 2026</p>
     </footer>
 
 </body>
