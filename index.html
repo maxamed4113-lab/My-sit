@@ -3,52 +3,68 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>الموقع الرسمي للشيخ زكريا العدني</title>
+    <meta name="description" content="الموقع الرسمي لفضيلة الشيخ زكريا بن شعيب العدني - دروس ومحاضرات وفتاوى شرعية">
+    <meta name="keywords" content="زكريا العدني, الشيخ زكريا العدني, الأصول الثلاثة, دروس سلفية, اليمن">
+    <title>الموقع الرسمي لفضيلة الشيخ زكريا بن شعيب العدني</title>
+    
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&family=Tajawal:wght@400;700&display=swap" rel="stylesheet">
+    
     <style>
-        body { font-family: 'Tajawal', sans-serif; background-color: #f4f7f7; }
+        body { font-family: 'Tajawal', sans-serif; background-color: #f0f5f5; }
         .font-amiri { font-family: 'Amiri', serif; }
-        .header-bg { background: linear-gradient(to bottom, #1e3a3a, #2d5a5a); border-bottom: 4px solid #b59410; }
-        .main-card { background: white; border: 1px solid #c5dada; border-radius: 12px; overflow: hidden; }
+        .header-gradient { background: linear-gradient(135deg, #163020 0%, #304d30 100%); border-bottom: 5px solid #b69d45; }
+        .audio-card { background: white; border-radius: 15px; border-right: 8px solid #163020; transition: 0.3s; }
+        .audio-card:hover { transform: translateY(-5px); box-shadow: 0 10px 20px rgba(0,0,0,0.1); }
     </style>
 </head>
-<body class="text-gray-800">
+<body class="text-gray-900">
 
-    <header class="header-bg text-white py-12 text-center">
-        <h1 class="text-4xl md:text-5xl font-amiri font-bold">الموقع الرسمي لفضيلة الشيخ زكريا العدني</h1>
-        <p class="mt-2 text-emerald-100 italic font-bold">بإشراف إدارة الموقع</p>
+    <header class="header-gradient text-white py-16 px-4 text-center shadow-2xl">
+        <div class="container mx-auto">
+            <h1 class="text-4xl md:text-6xl font-amiri font-bold mb-4 drop-shadow-lg text-yellow-500">الموقع الرسمي لفضيلة الشيخ زكريا بن شعيب العدني</h1>
+            <p class="text-xl md:text-2xl text-emerald-100 italic opacity-90">نشر العلم النافع على منهاج النبوة</p>
+            <div class="mt-6 inline-block bg-yellow-600 text-white px-6 py-1 rounded-full text-sm font-bold uppercase tracking-widest">بإشراف إدارة الموقع</div>
+        </div>
     </header>
 
-    <div class="container mx-auto px-4 py-8 max-w-4xl">
-        <div class="main-card shadow-xl">
-            <div class="bg-emerald-800 text-white p-4 text-center text-xl font-bold italic">🎙️ قسم الدروس الصوتية</div>
-            
-            <div class="p-6">
-                <div class="bg-emerald-50 border-2 border-emerald-100 rounded-2xl p-6 text-center shadow-inner">
-                    <h3 class="text-2xl font-bold text-emerald-900 mb-4 font-amiri italic">شرح الأصول الثلاثة - الدرس الأول</h3>
-                    
-                    <div class="mb-6">
-                        <audio controls class="w-full h-12 shadow-sm rounded-lg">
-                            <source src="الأصول الثلاثة ١.mp3" type="audio/mpeg">
-                            متصفحك لا يدعم المشغل.
-                        </audio>
+    <main class="container mx-auto px-4 py-12 max-w-4xl">
+        
+        <div class="space-y-8">
+            <h2 class="text-3xl font-amiri font-bold text-emerald-900 border-b-2 border-emerald-200 pb-2 mb-8 italic">🎙️ جديد الدروس الصوتية</h2>
+
+            <div class="audio-card p-6 shadow-md border border-gray-100">
+                <div class="flex flex-col md:flex-row justify-between items-center gap-6">
+                    <div class="text-center md:text-right">
+                        <h3 class="text-2xl font-bold text-emerald-800 font-amiri mb-2">شرح الأصول الثلاثة - الدرس الأول</h3>
+                        <p class="text-gray-500 text-sm">بصيغة MP3 - استماع وتحميل مباشر</p>
                     </div>
-
-                    <a href="الأصول الثلاثة ١.mp3" download class="inline-block bg-emerald-700 hover:bg-emerald-900 text-white px-10 py-4 rounded-full font-bold shadow-lg transition transform hover:scale-105">
-                        ⬇️ تحميل الدرس (MP3) مباشرة
-                    </a>
-                </div>
-
-                <div class="mt-8 text-center text-gray-500 italic border-t pt-4">
-                    سيتم إضافة باقي السلسلة والخطب فور رفعها..
+                    
+                    <div class="w-full md:w-1/2">
+                        <audio controls class="w-full mb-4">
+                            <source src="الأصول الثلاثة ١.mp3" type="audio/mpeg">
+                            متصفحك لا يدعم مشغل الصوت.
+                        </audio>
+                        
+                        <a href="الأصول الثلاثة ١.mp3" download class="flex items-center justify-center gap-2 bg-emerald-700 hover:bg-emerald-900 text-white py-3 px-6 rounded-xl font-bold transition shadow-lg">
+                            <span>⬇️ تحميل الدرس مباشرة</span>
+                        </a>
+                    </div>
                 </div>
             </div>
-        </div>
-    </div>
 
-    <footer class="text-center py-8 text-gray-400 text-sm">
-        جميع الحقوق محفوظة © 2026
+            <div class="bg-yellow-50 border-r-4 border-yellow-400 p-4 rounded-lg italic text-yellow-800 text-sm">
+                ملاحظة: يتم حالياً رفع باقي دروس السلسلة والخطب المنبرية تباعاً بإذن الله.
+            </div>
+        </div>
+
+    </main>
+
+    <footer class="bg-emerald-950 text-emerald-100 py-12 mt-20 text-center border-t-8 border-yellow-700">
+        <div class="container mx-auto px-4">
+            <p class="text-lg font-amiri mb-2 italic">الموقع الرسمي لفضيلة الشيخ زكريا بن شعيب العدني</p>
+            <p class="text-xs opacity-50 uppercase tracking-tighter">جميع الحقوق محفوظة لكل مسلم © 2026</p>
+        </div>
     </footer>
 
 </body>
