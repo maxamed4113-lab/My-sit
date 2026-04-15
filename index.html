@@ -1,19 +1,72 @@
-<div id="lessons" class="main-box p-6 border-t-4 border-emerald-700">
-    <h2 class="text-2xl font-bold text-emerald-800 mb-6 border-b pb-2 italic">🎙️ الدروس المسجلة (استماع وتحميل مباشر)</h2>
-    
-    <div class="space-y-4">
-        <div class="p-4 border rounded-lg bg-emerald-50 shadow-sm">
-            <h3 class="font-bold text-emerald-900 mb-2">شرح الأصول الثلاثة - الدرس الأول</h3>
-            <div class="flex flex-col gap-3">
-                <audio controls class="w-full h-10">
-                    <source src="lesson1.mp3" type="audio/mpeg">
-                    متصفحك لا يدعم مشغل الصوت.
-                </audio>
-                <a href="lesson1.mp3" download class="text-center bg-emerald-700 text-white py-2 rounded text-sm font-bold hover:bg-emerald-800">
-                    ⬇️ تحميل الملف الصوتي
-                </a>
-            </div>
-        </div>
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>الموقع الرسمي لفضيلة الشيخ زكريا العدني</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&family=Tajawal:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        body { font-family: 'Tajawal', sans-serif; background-color: #f0f4f4; }
+        .font-amiri { font-family: 'Amiri', serif; }
+        .main-box { background: white; border: 1px solid #adc9c9; border-radius: 8px; box-shadow: 0 2px 4px rgba(0,0,0,0.05); }
+        .header-bg { background: linear-gradient(to bottom, #1e3a3a, #2d5a5a); }
+    </style>
+</head>
+<body class="text-gray-800">
 
+    <header class="header-bg text-white py-10 shadow-lg border-b-4 border-yellow-600 text-center">
+        <div class="container mx-auto px-4">
+            <h1 class="text-4xl md:text-5xl font-amiri font-bold mb-3">الموقع الرسمي لفضيلة الشيخ زكريا بن شعيب العدني</h1>
+            <p class="text-emerald-100 italic">بإشراف إدارة الموقع</p>
         </div>
-</div>
+    </header>
+
+    <div class="container mx-auto px-4 py-8 flex flex-col md:flex-row gap-8">
+        
+        <aside class="w-full md:w-1/4 text-center md:text-right">
+            <div class="main-box overflow-hidden sticky top-5">
+                <div class="bg-emerald-800 text-white p-4 font-bold text-lg italic">أقسام الموقع</div>
+                <nav class="flex flex-col">
+                    <a href="index.html" class="p-4 border-b hover:bg-emerald-50 text-emerald-900 font-bold">🏠 الرئيسية</a>
+                    <a href="#" class="p-4 border-b bg-emerald-50 text-emerald-900 font-bold">🎙️ المحاضرات والدروس</a>
+                </nav>
+            </div>
+        </aside>
+
+        <main class="w-full md:w-3/4">
+            <div class="main-box p-6 border-t-4 border-emerald-700">
+                <h2 class="text-2xl font-bold text-emerald-800 mb-6 border-b pb-2 italic text-center md:text-right">🎙️ مكتبة الدروس الصوتية</h2>
+                
+                <div class="space-y-6">
+                    <div class="p-6 border-2 border-emerald-100 rounded-xl bg-white shadow-sm hover:shadow-md transition">
+                        <div class="flex flex-col gap-4">
+                            <h3 class="text-xl font-bold text-emerald-900 text-center md:text-right italic">شرح الأصول الثلاثة - الدرس الأول</h3>
+                            
+                            <div class="bg-gray-100 p-2 rounded-lg">
+                                <audio controls class="w-full h-12">
+                                    <source src="الأصول الثلاثة ١.mp3" type="audio/mpeg">
+                                    متصفحك لا يدعم مشغل الصوت.
+                                </audio>
+                            </div>
+
+                            <div class="flex justify-center md:justify-end">
+                                <a href="الأصول الثلاثة ١.mp3" download class="bg-emerald-700 hover:bg-emerald-800 text-white px-8 py-3 rounded-full font-bold flex items-center gap-2 shadow-lg transition">
+                                    <span>⬇️ تحميل الملف الصوتي (MP3)</span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <p class="text-center text-gray-400 italic py-4">يتم إضافة الدروس تباعاً بإذن الله..</p>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <footer class="bg-emerald-900 text-white py-8 mt-12 text-center text-sm border-t-4 border-yellow-600">
+        <p>جميع الحقوق محفوظة - الموقع الرسمي للشيخ زكريا العدني</p>
+    </footer>
+
+</body>
+</html>
