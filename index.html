@@ -1,83 +1,19 @@
-<!DOCTYPE html>
-<html lang="ar" dir="rtl">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>الموقع الرسمي لفضيلة الشيخ زكريا العدني</title>
-    <script src="https://cdn.tailwindcss.com"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&family=Tajawal:wght@400;700&display=swap" rel="stylesheet">
-    <style>
-        body { font-family: 'Tajawal', sans-serif; background-color: #f0f4f4; scroll-behavior: smooth; }
-        .font-amiri { font-family: 'Amiri', serif; }
-        .main-box { background: white; border: 1px solid #adc9c9; border-radius: 8px; box-shadow: 0 2px 4px rgba(0,0,0,0.05); }
-        .header-bg { background: linear-gradient(to bottom, #1e3a3a, #2d5a5a); }
-        .section-card { display: none; }
-        .section-card:target { display: block; }
-        #home:not(:target) ~ #home-content { display: block; }
-        .playlist-btn { background-color: #c2410c; transition: 0.3s; }
-        .playlist-btn:hover { background-color: #9a3412; transform: scale(1.02); }
-    </style>
-</head>
-<body class="text-gray-800">
-
-    <header class="header-bg text-white py-10 shadow-lg border-b-4 border-yellow-600 text-center">
-        <div class="container mx-auto px-4">
-            <h1 class="text-4xl md:text-5xl font-amiri font-bold mb-3">الموقع الرسمي لفضيلة الشيخ زكريا بن شعيب العدني</h1>
-            <p class="text-emerald-100 italic">بإشراف إدارة الموقع</p>
+<div id="lessons" class="main-box p-6 border-t-4 border-emerald-700">
+    <h2 class="text-2xl font-bold text-emerald-800 mb-6 border-b pb-2 italic">🎙️ الدروس المسجلة (استماع وتحميل مباشر)</h2>
+    
+    <div class="space-y-4">
+        <div class="p-4 border rounded-lg bg-emerald-50 shadow-sm">
+            <h3 class="font-bold text-emerald-900 mb-2">شرح الأصول الثلاثة - الدرس الأول</h3>
+            <div class="flex flex-col gap-3">
+                <audio controls class="w-full h-10">
+                    <source src="lesson1.mp3" type="audio/mpeg">
+                    متصفحك لا يدعم مشغل الصوت.
+                </audio>
+                <a href="lesson1.mp3" download class="text-center bg-emerald-700 text-white py-2 rounded text-sm font-bold hover:bg-emerald-800">
+                    ⬇️ تحميل الملف الصوتي
+                </a>
+            </div>
         </div>
-    </header>
 
-    <div class="container mx-auto px-4 py-8 flex flex-col md:flex-row gap-8">
-        
-        <aside class="w-full md:w-1/4">
-            <div class="main-box overflow-hidden sticky top-5">
-                <div class="bg-emerald-800 text-white p-4 font-bold text-center">أقسام الموقع</div>
-                <nav class="flex flex-col">
-                    <a href="#" class="p-4 border-b hover:bg-emerald-50 text-emerald-900 font-bold">🏠 الرئيسية</a>
-                    <a href="#lessons" class="p-4 border-b bg-emerald-50 text-emerald-900 font-bold">🎙️ المحاضرات الصوتية</a>
-                    <a href="#fatwa" class="p-4 border-b hover:bg-emerald-50 text-emerald-900 font-bold">🔹 فتاوى العقيدة</a>
-                    <a href="#books" class="p-4 border-b hover:bg-emerald-50 text-emerald-900 font-bold">📚 مؤلفات الشيخ</a>
-                </nav>
-            </div>
-        </aside>
-
-        <main class="w-full md:w-3/4">
-            
-            <div id="lessons" class="main-box p-6 border-t-4 border-emerald-700">
-                <h2 class="text-2xl font-bold text-emerald-800 mb-6 border-b pb-2 italic">🎙️ المحاضرات والدروس العلمية</h2>
-                
-                <div class="space-y-6">
-                    <div class="p-5 border-2 border-emerald-100 rounded-xl bg-white shadow-sm">
-                        <div class="flex flex-col md:flex-row justify-between items-center gap-4 text-center md:text-right">
-                            <div>
-                                <h3 class="text-xl font-bold text-emerald-900 mb-1">شرح الأصول الثلاثة</h3>
-                                <p class="text-gray-500 text-sm">عدد الدروس: 6 دروس كاملة</p>
-                            </div>
-                            <a href="https://youtube.com/playlist?list=PLnywrwC1MV3pMq7UNRWuazkXASZ-_0y8u&si=Fdjqrn0q2KzlAuis" target="_blank" class="playlist-btn text-white px-6 py-3 rounded-lg font-bold flex items-center gap-2">
-                                <span>▶️ تشغيل السلسلة كاملة</span>
-                            </a>
-                        </div>
-                    </div>
-                    
-                    <p class="text-center text-gray-400 italic py-4">سيتم إضافة المزيد من السلاسل والدروس قريباً بإذن الله..</p>
-                </div>
-            </div>
-
-            <div id="fatwa" class="section-card main-box p-6 border-t-4 border-emerald-700">
-                <h2 class="text-2xl font-bold text-emerald-800 mb-4 italic border-b pb-2">🔹 فتاوى العقيدة</h2>
-                <p class="text-gray-500 text-center py-10 italic">يتم تجهيز الفتاوى حالياً..</p>
-            </div>
-
-            <div id="books" class="section-card main-box p-6 border-t-4 border-emerald-700">
-                <h2 class="text-2xl font-bold text-emerald-800 mb-4 italic border-b pb-2">📚 مؤلفات الشيخ</h2>
-                <p class="text-gray-500 text-center py-10 italic">يتم رفع ملفات الكتب حالياً..</p>
-            </div>
-        </main>
-    </div>
-
-    <footer class="bg-emerald-900 text-white py-8 mt-12 text-center text-sm border-t-4 border-yellow-600">
-        <p>الموقع الرسمي لفضيلة الشيخ زكريا بن شعيب العدني</p>
-    </footer>
-
-</body>
-</html>
+        </div>
+</div>
